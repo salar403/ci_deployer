@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Set your project details
+apt-get install python3-venv
+
 PROJECT_DIR="/path/to/your/project"
 VENV_DIR="./venv"
-INI_FILE="/etc/systemd/system/ci_runner.service"
+INI_FILE="/etc/systemd/system/ci_deployer.service"
 USER="root"
 GROUP="root"
 
@@ -28,5 +30,5 @@ EOL
 
 # Reload systemd
 systemctl daemon-reload
-systemctl start ci_runner
-systemctl enable ci_runner
+systemctl start ci_deployer
+systemctl enable ci_deployer
