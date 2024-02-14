@@ -6,8 +6,9 @@ from starlette.requests import Request
 from app.environments import SOURCE_IP, API_KEY, SCRIPT_PATH, API_KEY_HEADER
 
 app = FastAPI()
+api_key_header = APIKeyHeader(name=API_KEY_HEADER, auto_error=False)
 
-def validate_api_key(api_key: str = Depends(API_KEY_HEADER)):
+def validate_api_key(api_key: str = Depends(api_key_header)):
     if not API_KEY or api_key == API_KEY:
         return
     raise HTTPException(status_code=403, detail="Invalid API key")
