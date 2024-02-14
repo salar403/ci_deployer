@@ -14,11 +14,6 @@ python3 -m venv venv
 source venv/bin/activate
 https_proxy=http://fodev.org:8118 pip install -r $PROJECT_DIR/requirements.txt
 
-if [ -f "$ENV_FILE" ]; then
-    python -m pip install python-dotenv
-    python -c "from dotenv import load_dotenv; load_dotenv('$ENV_FILE')"
-fi
-
 cat <<EOL >$INI_FILE
 [Unit]
 Description=Your FastAPI Project
