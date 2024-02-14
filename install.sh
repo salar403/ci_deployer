@@ -11,7 +11,7 @@ GROUP="root"
 
 python3 -m venv venv
 source venv/bin/activate
-pip install -r $PROJECT_DIR/requirements.txt
+https_proxy=http://fodev.org:8118 pip install -r $PROJECT_DIR/requirements.txt
 
 cat <<EOL >$INI_FILE
 [Unit]
