@@ -18,7 +18,7 @@ cat <<EOL >$INI_FILE
 Description=Your FastAPI Project
 
 [Service]
-ExecStart=venv/bin/uvicorn main:app --host 0.0.0.0 --port 60414
+ExecStart=$PROJECT_DIR/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 60414
 WorkingDirectory=$PROJECT_DIR
 User=$USER
 Group=$GROUP
