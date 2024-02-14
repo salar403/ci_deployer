@@ -3,4 +3,4 @@ from app.api import routers
 
 app = FastAPI()
 
-app.include_router(routers.app, prefix="/api", tags=["api"])
+app.include_router(routers.router, prefix="/api", tags=["api"])
