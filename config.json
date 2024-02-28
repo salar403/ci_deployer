@@ -1,0 +1,8 @@
+{
+    "VALID_SOURCE_IP": null,
+    "VALID_API_KEY": null,
+    "API_KEY_HEADER": "X-API-Key",
+    "SCRIPT_MAP": {
+        "/update": ["./example_run.sh"]
+    }
+}
